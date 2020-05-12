@@ -1,0 +1,57 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Ambient® Lighting Palette",
+      "price": 6400
+    },
+    {
+      "id": 2,
+      "name": "Radiant Creamy Concealer",
+      "price": 3199
+    },
+    {
+      "id": 3,
+      "name": "Translucent Loose Setting Powder",
+      "price": 3900
+    },
+    {
+      "id": 4,
+      "name": "Mini Summer Makeup Essentials Set",
+      "price": 8800
+    },
+    {
+      "id": 5,
+      "name": "All Nighter Long-Lasting Makeup Setting Spray",
+      "price": 3300
+    },
+    {
+      "id": 6,
+      "name": "Hydro Grip Primer",
+      "price": 6400
+    },
+    {
+      "id": 7,
+      "name": "Ambient Metallic Strobe Lighting Palette",
+      "price": 5899
+    },
+    {
+      "id": 8,
+      "name": "Sublime Perfection Concealer",
+      "price": 3200
+    },
+    {
+      "id": 9,
+      "name": "Sheer Glow Foundation",
+      "price": 4700
+    },
+    {
+      "id": 10,
+      "name": "The POREfessional Face Primer",
+      "price": 3200
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

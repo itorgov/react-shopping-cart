@@ -1,4 +1,10 @@
 .items {
   display: flex;
   flex-direction: column;
+
+  .empty {
+    align-self: center;
+    font-size: 2rem;
+    margin-top: 4rem;
+  }
 }
