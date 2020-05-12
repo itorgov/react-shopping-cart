@@ -1,0 +1,10 @@
+.summary {
+  flex: 1;
+
+  padding: 6rem 10rem 6rem 3rem;
+  background-color: var(--color-primary);
+
+  & p {
+    font-size: 1.3rem;
+  }
+}

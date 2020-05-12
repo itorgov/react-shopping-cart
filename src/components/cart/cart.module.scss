@@ -1,0 +1,10 @@
+.cart {
+  width: 100%;
+  max-width: 114rem;
+  margin: 5rem auto;
+  background-color: var(--color-white);
+  border-radius: 2px;
+  box-shadow: 2rem 2rem 5rem rgba(var(--color-secondary-rgb), 0.3);
+
+  display: flex;
+}

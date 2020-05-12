@@ -1,0 +1,68 @@
+.button {
+  background-color: transparent;
+  border: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:focus {
+    outline: none;
+  }
+
+  & svg {
+    width: 2rem;
+    height: 2rem;
+    fill: currentColor;
+    opacity: 0.8;
+    transition: all 0.2s;
+  }
+
+  &:hover svg,
+  &:active svg,
+  &:focus svg {
+    opacity: 1;
+  }
+}
+
+.remove {
+  color: var(--color-secondary);
+}
+
+.increment,
+.decrement {
+  color: var(--color-text-dark);
+
+  & svg {
+    opacity: 0.6;
+  }
+}
+
+.shake {
+  &:hover,
+  &:focus {
+    animation: shake 1s;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}

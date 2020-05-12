@@ -1,0 +1,32 @@
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.input {
+  font-family: inherit;
+  font-size: 1.6rem;
+  color: var(--color-text-light);
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(var(--color-black-rgb), 0.1);
+  border-radius: 10rem;
+
+  &::placeholder {
+    color: var(--color-text-light);
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 1rem 3rem rgba(var(--color-secondary-rgb), 0.1);
+  }
+}
