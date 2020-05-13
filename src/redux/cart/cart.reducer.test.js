@@ -169,6 +169,42 @@ describe('REDUCERS: Test cart reducer', () => {
         });
     });
 
+    it(`${CartActionTypes.DECREMENT_ITEM_QUANTITY}, cannot decrement when quantity less then 2`, () => {
+        let state = {
+            items: [
+                {
+                    id: 1,
+                    name: "Test name A",
+                    price: 3900,
+                    quantity: 1,
+                },
+            ],
+            note: '',
+        }
+
+        state = cartReducer(state, {
+            type: CartActionTypes.DECREMENT_ITEM_QUANTITY,
+            payload: {
+                id: 1,
+                name: "Test name A",
+                price: 3900,
+                quantity: 1,
+            },
+        });
+
+        expect(state).toEqual({
+            items: [
+                {
+                    id: 1,
+                    name: "Test name A",
+                    price: 3900,
+                    quantity: 1,
+                },
+            ],
+            note: '',
+        });
+    });
+
     it(CartActionTypes.REMOVE_ITEM, () => {
         let state = {
             items: [
@@ -220,6 +256,37 @@ describe('REDUCERS: Test cart reducer', () => {
                 }
             ],
             note: '',
+        });
+    });
+
+    it(CartActionTypes.UPDATE_NOTE, () => {
+        let state = {
+            items: [
+                {
+                    id: 1,
+                    name: "Test name",
+                    price: 3900,
+                    quantity: 1,
+                },
+            ],
+            note: 'Old note value',
+        }
+
+        state = cartReducer(state, {
+            type: CartActionTypes.UPDATE_NOTE,
+            payload: 'New note value'
+        });
+
+        expect(state).toEqual({
+            items: [
+                {
+                    id: 1,
+                    name: "Test name",
+                    price: 3900,
+                    quantity: 1,
+                },
+            ],
+            note: 'New note value',
         });
     });
 });

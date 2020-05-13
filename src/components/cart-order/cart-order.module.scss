@@ -2,4 +2,12 @@
   flex: 2;
 
   padding: 6rem 3rem 6rem 10rem;
+
+  @media only screen and (max-width: 56.25em) {
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: 43.75em) {
+    flex: 0;
+  }
 }
