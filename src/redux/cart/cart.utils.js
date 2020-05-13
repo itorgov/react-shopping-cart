@@ -11,7 +11,7 @@ export const addItem = (items, itemToAdd) => {
         );
     }
 
-    return [...items, {...itemToAdd, quantity: 1}];
+    return [{...itemToAdd, quantity: 1}, ...items];
 };
 
 export const incrementItemQuantity = (items, item) => {
