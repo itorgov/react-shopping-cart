@@ -2,6 +2,7 @@ import React from 'react';
 import {useDispatch} from "react-redux";
 
 import {OrderItemButton} from "../order-item-button/order-item-button.component";
+import {decrementItemQuantity, incrementItemQuantity} from '../../redux/cart/cart.actions';
 
 import styles from './order-item-quantity.module.scss';
 
@@ -12,12 +13,12 @@ export const OrderItemQuantity = ({item}) => {
         <div>
             <OrderItemButton
                 variant='decrement'
-                onClick={() => dispatch({type: 'DECREMENT_ITEM_QUANTITY', payload: item.id})}
+                onClick={() => dispatch(decrementItemQuantity(item))}
             />
             <span className={styles.quantity}>{item.quantity}</span>
             <OrderItemButton
                 variant='increment'
-                onClick={() => dispatch({type: 'INCREMENT_ITEM_QUANTITY', payload: item.id})}
+                onClick={() => dispatch(incrementItemQuantity(item))}
             />
         </div>
     );

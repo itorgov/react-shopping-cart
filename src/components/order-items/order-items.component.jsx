@@ -1,13 +1,13 @@
 import React from 'react';
-import {useSelector} from "react-redux";
+import {useSelector} from 'react-redux';
 
-import {OrderItemsHeader} from "../order-items-header/order-items-header.component";
-import {OrderItem} from "../order-item/order-item.component";
+import {OrderItemsHeader} from '../order-items-header/order-items-header.component';
+import {OrderItem} from '../order-item/order-item.component';
 
 import styles from './order-items.module.scss';
 
 export const OrderItems = () => {
-    const items = useSelector(state => state.items);
+    const items = useSelector(state => state.cart.items);
 
     return (
         <div className={styles.items}>

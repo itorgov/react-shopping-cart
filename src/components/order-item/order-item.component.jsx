@@ -4,6 +4,7 @@ import {useDispatch} from "react-redux";
 import {OrderItemQuantity} from '../order-item-quantity/order-item-quantity.component';
 import {OrderItemButton} from '../order-item-button/order-item-button.component';
 import {Price} from '../price/price.component';
+import {removeItem} from '../../redux/cart/cart.actions';
 
 import styles from './order-item.module.scss';
 
@@ -23,7 +24,7 @@ export const OrderItem = ({item}) => {
             <OrderItemButton
                 variant='remove'
                 shake={true}
-                onClick={() => dispatch({type: 'REMOVE_ITEM', payload: item.id})}
+                onClick={() => dispatch(removeItem(item))}
             />
         </div>
     )
