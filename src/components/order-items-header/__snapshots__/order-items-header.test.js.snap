@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OrderItemsHeader /> expect to render 1`] = `
+<div
+  className="header"
+>
+  <div>
+    Product
+  </div>
+  <div>
+    Price
+  </div>
+  <div>
+    Qty
+  </div>
+  <div>
+    Total
+  </div>
+  <div>
+     
+  </div>
+</div>
+`;

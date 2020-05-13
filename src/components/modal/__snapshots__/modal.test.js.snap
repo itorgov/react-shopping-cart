@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> expect to render button as default 1`] = `
+<Fragment>
+  <Button
+    onClick={[Function]}
+    small={false}
+    variant="black"
+  >
+    Add more
+  </Button>
+</Fragment>
+`;
+
+exports[`<Modal /> expect to render modal when it has opened prop 1`] = `
+<Fragment>
+  <Button
+    onClick={[Function]}
+    small={false}
+    variant="black"
+  >
+    Add more
+  </Button>
+  <Portal
+    containerInfo={<div />}
+  >
+    <div
+      className="modal"
+      onClick={[Function]}
+    >
+      <div
+        className="header"
+      >
+        <h2
+          className="title"
+        >
+          Choose a product
+        </h2>
+        <button
+          className="close"
+          onClick={[Function]}
+        >
+          ×
+        </button>
+      </div>
+      <div
+        className="content"
+      />
+    </div>
+    <div
+      className="cover"
+      onClick={[Function]}
+    />
+  </Portal>
+</Fragment>
+`;

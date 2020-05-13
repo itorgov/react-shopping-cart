@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> expect to render 1`] = `
+<div
+  className="group"
+>
+  <input
+    className="input"
+  />
+</div>
+`;
+
+exports[`<Input /> expect to render with label when it passed as a prop 1`] = `
+<div
+  className="group"
+>
+  <label
+    className="label"
+    htmlFor="test"
+  >
+    Test label
+  </label>
+  <input
+    className="input"
+    id="test"
+  />
+</div>
+`;

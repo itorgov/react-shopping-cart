@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartSummaryBlock /> expect to render 1`] = `
+<div
+  className="summary"
+>
+  <CartTotal />
+  <p>
+    Shipping & taxes will calculated at checkout
+  </p>
+  <Checkbox>
+    I agree to 
+    <a
+      href="/"
+    >
+      Terms & Conditions
+    </a>
+  </Checkbox>
+  <Button
+    variant="black"
+  >
+    Checkout
+    <ForwardRef(SvgLock) />
+  </Button>
+</div>
+`;

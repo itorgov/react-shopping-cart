@@ -1,9 +1,10 @@
 import React from 'react'
-import { shallow, mount } from 'enzyme';
+import {mount, shallow} from 'enzyme';
+import {Provider} from 'react-redux';
+import configureStore from 'redux-mock-store'
+
 import {OrderItemQuantity} from './order-item-quantity.component'
 import {OrderItemButton} from '../order-item-button/order-item-button.component'
-import configureStore from 'redux-mock-store'
-import {Provider} from 'react-redux';
 
 const mockStore = configureStore();
 const initialState = {
@@ -20,7 +21,11 @@ const initialState = {
 const store = mockStore(initialState);
 
 describe('<OrderItemQuantity />', () => {
-    it('Decrementing', () => {
+    it('expect to render', () => {
+        expect(shallow(<Provider store={store}><OrderItemQuantity /></Provider>)).toMatchSnapshot();
+    });
+
+    it('decrementing', () => {
         const wrapper = mount(<Provider store={store}><OrderItemQuantity item={{
             id: 1,
             name: "Test name",

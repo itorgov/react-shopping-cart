@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartOrder /> expect to render 1`] = `
+<div
+  className="order"
+>
+  <OrderItems />
+  <AddItemModal />
+  <OrderInfo />
+</div>
+`;

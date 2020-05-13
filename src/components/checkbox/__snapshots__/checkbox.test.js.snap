@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> expect to render 1`] = `
+<label
+  className="checkbox my-4"
+>
+  <input
+    type="checkbox"
+  />
+  <span
+    className="checkmark"
+  />
+</label>
+`;

@@ -22,7 +22,7 @@ const renderIcon = variant => {
 export const OrderItemButton = ({variant, shake = false, onClick}) => (
     <button className={classNames({
         [styles.button]: true,
-        [styles[variant]]: true,
+        [styles[variant]]: variant !== undefined,
         [styles.shake]: shake,
     })}
             onClick={onClick}

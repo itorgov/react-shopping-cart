@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OrderInfo /> expect to render 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <OrderInfo>
+    <div
+      className="info"
+    >
+      <Input
+        id="note"
+        label="Add a note"
+        onChange={[Function]}
+        placeholder="Some words to our team"
+        type="text"
+        value=""
+      >
+        <div
+          className="group"
+        >
+          <label
+            className="label"
+            htmlFor="note"
+          >
+            Add a note
+          </label>
+          <input
+            className="input"
+            id="note"
+            onChange={[Function]}
+            placeholder="Some words to our team"
+            type="text"
+            value=""
+          />
+        </div>
+      </Input>
+    </div>
+  </OrderInfo>
+</Provider>
+`;
