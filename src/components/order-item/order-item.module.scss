@@ -4,14 +4,18 @@
   display: flex;
   align-items: center;
 
-  & div {
+  div {
     flex: 1;
     display: flex;
     align-items: center;
   }
 
-  & div:first-child {
+  div:first-child {
     flex: 2;
+  }
+
+  div:not(:last-child) {
+    margin-right: 1rem;
   }
 }
 

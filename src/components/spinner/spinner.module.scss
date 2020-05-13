@@ -1,0 +1,46 @@
+.loader {
+  color: var(--color-secondary);
+  font-size: 1rem;
+  margin: 1rem auto 5.5rem auto;
+  position: relative;
+  text-indent: -9999rem;
+  transform: translateZ(0);
+  animation-delay: -0.16s;
+
+  &,
+  &::before,
+  &::after {
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    animation-fill-mode: both;
+    animation: load 1.8s infinite ease-in-out;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+
+  &::before {
+    left: -3.5rem;
+    animation-delay: -0.32s;
+  }
+
+  &::after {
+    left: 3.5rem;
+  }
+}
+
+@keyframes load {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5rem 0 -1.3rem;
+  }
+  40% {
+    box-shadow: 0 2.5rem 0 0;
+  }
+}
