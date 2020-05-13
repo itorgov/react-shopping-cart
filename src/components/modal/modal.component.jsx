@@ -51,10 +51,7 @@ export const Modal = ({
                 Add more
             </Button>
             {opened ? ReactDOM.createPortal(
-                <div
-                    className={styles.cover}
-                    onClick={() => closeModal()}
-                >
+                <>
                     <div
                         className={styles.modal}
                         onClick={event => event.stopPropagation()}
@@ -74,7 +71,11 @@ export const Modal = ({
                             {content}
                         </div>
                     </div>
-                </div>,
+                    <div
+                        className={styles.cover}
+                        onClick={() => closeModal()}
+                    />
+                </>,
                 el
             ) : ''}
         </>
