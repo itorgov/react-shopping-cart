@@ -1,35 +1,41 @@
 import React from "react";
-import {shallow} from "enzyme";
+import {mount} from "enzyme";
 import {Provider} from 'react-redux';
 import configureStore from 'redux-mock-store'
 
 import {OrderItem} from './order-item.component';
+import {OrderItemButton} from "../order-item-button/order-item-button.component";
 
-const mockStore = configureStore();
-const initialState = {
-    cart: {
-        items: [
-            {
-                id: 1,
-                name: "Test name",
-                price: 3900,
-                quantity: 2,
-            },
-        ],
+let wrapper;
+let store;
+
+beforeEach(() => {
+    const mockStore = configureStore();
+    const mockItem = {
+        id: 1,
+        name: "Test name",
+        price: 3900,
+        quantity: 2,
+    };
+    const initialState = {
+        items: [mockItem],
         note: '',
-    }
-};
-const store = mockStore(initialState);
+    };
+    store = mockStore(initialState);
+    wrapper = mount(<Provider store={store}><OrderItem item={mockItem} /></Provider>);
+});
 
 describe('<OrderItem />', () => {
     it('expect to render', () => {
-        const mockItem = {
-            id: 1,
-            name: "Test name",
-            price: 3900,
-            quantity: 2,
-        };
+        expect(wrapper).toMatchSnapshot();
+    });
 
-        expect(shallow(<Provider store={store}><OrderItem item={mockItem} /></Provider>)).toMatchSnapshot();
+    it('remove button has to dispatch REMOVE_ITEM action', () => {
+        expect(wrapper.find(OrderItemButton).at(2).prop('variant')).toBe('remove');
+
+        wrapper.find(OrderItemButton).at(2).simulate('click');
+
+        const action = store.getActions();
+        expect(action[0].type).toBe("REMOVE_ITEM");
     });
 });

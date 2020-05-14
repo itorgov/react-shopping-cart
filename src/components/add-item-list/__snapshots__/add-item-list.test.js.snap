@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddItemList /> expect to render 1`] = `
+<div
+  className="list"
+>
+  <AddItem
+    item={
+      Object {
+        "id": 1,
+        "name": "Test name A",
+        "price": 4000,
+      }
+    }
+    key="1"
+  />
+  <AddItem
+    item={
+      Object {
+        "id": 1,
+        "name": "Test name B",
+        "price": 2000,
+      }
+    }
+    key="1"
+  />
+</div>
+`;

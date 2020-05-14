@@ -1,37 +1,193 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<OrderItems /> expect to render 1`] = `
-<ContextProvider
-  value={
+exports[`<OrderItems /> expect to render a message about the empty cart when there is no items 1`] = `
+<Provider
+  store={
     Object {
-      "store": Object {
-        "clearActions": [Function],
-        "dispatch": [Function],
-        "getActions": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-      },
-      "subscription": Subscription {
-        "handleChangeWrapper": [Function],
-        "listeners": Object {
-          "notify": [Function],
-        },
-        "onStateChange": [Function],
-        "parentSub": undefined,
-        "store": Object {
-          "clearActions": [Function],
-          "dispatch": [Function],
-          "getActions": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-        },
-        "unsubscribe": null,
-      },
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
     }
   }
 >
-  <OrderItems />
-</ContextProvider>
+  <OrderItems>
+    <div
+      className="items"
+    >
+      <OrderItemsHeader>
+        <div
+          className="header"
+        >
+          <div>
+            Product
+          </div>
+          <div>
+            Price
+          </div>
+          <div>
+            Qty
+          </div>
+          <div>
+            Total
+          </div>
+          <div>
+             
+          </div>
+        </div>
+      </OrderItemsHeader>
+      <span
+        className="empty"
+      >
+        Your cart is empty
+      </span>
+    </div>
+  </OrderItems>
+</Provider>
+`;
+
+exports[`<OrderItems /> expect to render items 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <OrderItems>
+    <div
+      className="items"
+    >
+      <OrderItemsHeader>
+        <div
+          className="header"
+        >
+          <div>
+            Product
+          </div>
+          <div>
+            Price
+          </div>
+          <div>
+            Qty
+          </div>
+          <div>
+            Total
+          </div>
+          <div>
+             
+          </div>
+        </div>
+      </OrderItemsHeader>
+      <OrderItem
+        item={
+          Object {
+            "id": 1,
+            "name": "Test name",
+            "price": 3900,
+            "quantity": 2,
+          }
+        }
+        key="1"
+      >
+        <div
+          className="item"
+        >
+          <div>
+            Test name
+          </div>
+          <div
+            className="price"
+          >
+            <Price
+              value={3900}
+            >
+              $39.00
+            </Price>
+          </div>
+          <OrderItemQuantity
+            item={
+              Object {
+                "id": 1,
+                "name": "Test name",
+                "price": 3900,
+                "quantity": 2,
+              }
+            }
+          >
+            <div>
+              <OrderItemButton
+                onClick={[Function]}
+                variant="decrement"
+              >
+                <button
+                  className="button decrement"
+                  onClick={[Function]}
+                >
+                  <ForwardRef(SvgMinus)>
+                    <svg>
+                      minus.svg
+                    </svg>
+                  </ForwardRef(SvgMinus)>
+                </button>
+              </OrderItemButton>
+              <span
+                className="quantity"
+              >
+                2
+              </span>
+              <OrderItemButton
+                onClick={[Function]}
+                variant="increment"
+              >
+                <button
+                  className="button increment"
+                  onClick={[Function]}
+                >
+                  <ForwardRef(SvgPlus)>
+                    <svg>
+                      plus.svg
+                    </svg>
+                  </ForwardRef(SvgPlus)>
+                </button>
+              </OrderItemButton>
+            </div>
+          </OrderItemQuantity>
+          <div
+            className="price"
+          >
+            <Price
+              value={7800}
+            >
+              $78.00
+            </Price>
+          </div>
+          <OrderItemButton
+            onClick={[Function]}
+            shake={true}
+            variant="remove"
+          >
+            <button
+              className="button remove shake"
+              onClick={[Function]}
+            >
+              <ForwardRef(SvgTrash)>
+                <svg>
+                  trash.svg
+                </svg>
+              </ForwardRef(SvgTrash)>
+            </button>
+          </OrderItemButton>
+        </div>
+      </OrderItem>
+    </div>
+  </OrderItems>
+</Provider>
 `;

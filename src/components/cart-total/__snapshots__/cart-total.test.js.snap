@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartTotal /> expect to render 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <CartTotal>
+    <div
+      className="text"
+    >
+      Cart total 
+      <span
+        className="price"
+      >
+        <Price
+          value={10000}
+        >
+          $100.00
+        </Price>
+      </span>
+    </div>
+  </CartTotal>
+</Provider>
+`;

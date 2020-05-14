@@ -14,6 +14,7 @@ export const OrderInfo = () => {
         <div className={styles.info}>
             <Input
                 id='note'
+                name='note'
                 type='text'
                 placeholder='Some words to our team'
                 label='Add a note'

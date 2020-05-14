@@ -1,37 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<OrderItemQuantity /> expect to render 1`] = `
-<ContextProvider
-  value={
+<Provider
+  store={
     Object {
-      "store": Object {
-        "clearActions": [Function],
-        "dispatch": [Function],
-        "getActions": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-      },
-      "subscription": Subscription {
-        "handleChangeWrapper": [Function],
-        "listeners": Object {
-          "notify": [Function],
-        },
-        "onStateChange": [Function],
-        "parentSub": undefined,
-        "store": Object {
-          "clearActions": [Function],
-          "dispatch": [Function],
-          "getActions": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-        },
-        "unsubscribe": null,
-      },
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
     }
   }
 >
-  <OrderItemQuantity />
-</ContextProvider>
+  <OrderItemQuantity
+    item={
+      Object {
+        "id": 1,
+        "name": "Test name",
+        "price": 3900,
+        "quantity": 2,
+      }
+    }
+  >
+    <div>
+      <OrderItemButton
+        onClick={[Function]}
+        variant="decrement"
+      >
+        <button
+          className="button decrement"
+          onClick={[Function]}
+        >
+          <ForwardRef(SvgMinus)>
+            <svg>
+              minus.svg
+            </svg>
+          </ForwardRef(SvgMinus)>
+        </button>
+      </OrderItemButton>
+      <span
+        className="quantity"
+      >
+        2
+      </span>
+      <OrderItemButton
+        onClick={[Function]}
+        variant="increment"
+      >
+        <button
+          className="button increment"
+          onClick={[Function]}
+        >
+          <ForwardRef(SvgPlus)>
+            <svg>
+              plus.svg
+            </svg>
+          </ForwardRef(SvgPlus)>
+        </button>
+      </OrderItemButton>
+    </div>
+  </OrderItemQuantity>
+</Provider>
 `;

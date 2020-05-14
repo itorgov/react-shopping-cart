@@ -20,10 +20,11 @@ exports[`<OrderInfo /> expect to render 1`] = `
       <Input
         id="note"
         label="Add a note"
+        name="note"
         onChange={[Function]}
         placeholder="Some words to our team"
         type="text"
-        value=""
+        value="Test note value"
       >
         <div
           className="group"
@@ -40,7 +41,7 @@ exports[`<OrderInfo /> expect to render 1`] = `
             onChange={[Function]}
             placeholder="Some words to our team"
             type="text"
-            value=""
+            value="Test note value"
           />
         </div>
       </Input>

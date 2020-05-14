@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddItem /> expect to render 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <AddItem
+    item={
+      Object {
+        "id": 1,
+        "name": "Test name",
+        "price": 3900,
+      }
+    }
+  >
+    <div
+      className="card"
+    >
+      <h2
+        className="header"
+      >
+        Test name
+      </h2>
+      <div
+        className="cta-block"
+      >
+        <div
+          className="price"
+        >
+          <Price
+            value={3900}
+          >
+            $39.00
+          </Price>
+        </div>
+        <Button
+          onClick={[Function]}
+          small={true}
+          variant="black"
+        >
+          <button
+            className="button black small"
+            onClick={[Function]}
+          >
+            Add to cart
+          </button>
+        </Button>
+      </div>
+    </div>
+  </AddItem>
+</Provider>
+`;
